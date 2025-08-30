@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa:wght@400&family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(153, 62%, 11%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(153, 62%, 11%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(153, 62%, 11%);
+  --border: hsl(148, 64%, 18%);
+  --input: hsl(148, 64%, 18%);
+  --primary: hsl(155, 65%, 32%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(346, 84%, 44%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(153, 62%, 11%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(155, 65%, 32%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+/* AloeGuard specific styles */
+.font-salsa {
+  font-family: 'Salsa', cursive;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Custom gradient text for AloeGuard branding */
+.aloe-gradient-text {
+  background: linear-gradient(90deg, rgba(7,54,41,1) 0%, rgba(28,134,104,1) 49%, rgba(7,54,41,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/* Mobile-first responsive container */
+.mobile-container {
+  max-width: 393px;
+  margin: 0 auto;
+  background-color: hsl(153, 100%, 97%);
+}
+
+/* Custom switch styles for AloeGuard theme */
+.switch-thumb[data-state="checked"] {
+  background-color: hsl(155, 65%, 32%);
+}
+
+.switch-track[data-state="checked"] {
+  background-color: hsl(155, 65%, 32%);
+}
